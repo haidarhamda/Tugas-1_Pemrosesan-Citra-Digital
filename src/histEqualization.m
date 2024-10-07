@@ -1,7 +1,7 @@
 function histogramEqualizaation(img)
     [n, m, ~] = size(img);
     hist=imhist(img)/(n*m);
-    histEq = zeros(n,m);
+    histEq = zeros(256);
 
     sum=0.0;
     for i=1:256
