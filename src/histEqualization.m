@@ -1,4 +1,4 @@
-function histogramEqualizaation(img)
+function [ret] = histEqualization(img)
     [n, m, ~] = size(img);
     hist=imhist(img)/(n*m);
     histEq = zeros(256);
@@ -17,7 +17,7 @@ function histogramEqualizaation(img)
             img(i,j)=histEq(img(i,j)+1);
         end
     end
-    imshow(img);
+    ret = img;
 end
 
 %i = imread("images\boat.bmp");
