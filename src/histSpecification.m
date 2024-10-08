@@ -46,7 +46,7 @@ function [resutImg,resultHist]=histSpecification(imgTarget, imgRef)
     end
     %imshow(imgTarget);
     resutImg=imgTarget;
-    resultHist=imhist(imgTarget);
+    resultHist=customHistogram(imgTarget);
 end
 
 %target = imread("images\boat.bmp");
