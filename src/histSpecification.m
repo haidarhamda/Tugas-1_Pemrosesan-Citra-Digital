@@ -1,4 +1,4 @@
-function histSpecification(imgTarget, imgRef)
+function [resutImg,resultHist]=histSpecification(imgTarget, imgRef)
     [n, m, ~] = size(imgTarget);
     [nref,mref,~] = size(imgRef);
     if(n~=nref || m~=mref)
@@ -44,7 +44,9 @@ function histSpecification(imgTarget, imgRef)
             imgTarget(i,j)=invHist(imgTarget(i,j)+1);
         end
     end
-    imshow(imgTarget);
+    %imshow(imgTarget);
+    resutImg=imgTarget;
+    resultHist=imhist(imgTarget);
 end
 
 %target = imread("images\boat.bmp");
