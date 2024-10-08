@@ -1,4 +1,4 @@
-function [ret] = histEquaalization(img)
+function [ret] = histEqualization(img)
     [n, m, c] = size(img);
     
     for channel=1:c
