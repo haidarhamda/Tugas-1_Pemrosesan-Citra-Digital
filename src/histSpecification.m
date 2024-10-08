@@ -5,8 +5,8 @@ function [resutImg,resultHist]=histSpecification(imgTarget, imgRef)
         imgRef = imresize(imgRef,[n,m]);
     end
     dim=n*m;
-    refHist=imhist(imgRef)/(dim);
-    targetHist=imhist(imgTarget)/(dim);
+    refHist=customHistogram(imgRef)/(dim);
+    targetHist=customHistogram(imgTarget)/(dim);
     eqHist = zeros(256);
     refEqHist = zeros(256);
     invHist = zeros(256);

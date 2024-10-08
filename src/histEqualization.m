@@ -1,6 +1,6 @@
 function [ret] = histEqualization(img)
     [n, m, ~] = size(img);
-    hist=imhist(img)/(n*m);
+    hist=customHistogram(img)/(n*m);
     histEq = zeros(256);
 
     sum=0.0;
